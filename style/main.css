@@ -86,7 +86,7 @@ body {
 
 #task-form {
     margin-top: 2rem;
-    width: clamp(350px, 40vw, 990px);
+    width: clamp(300px, 40vw, 990px);
     margin-inline: auto;
     display: flex;
     align-items: center;
@@ -113,7 +113,10 @@ body {
 
 #task-form > #task-name-input {
     flex: 1 1;
-    margin-inline-end: 1rem;
+}
+
+#task-form > * {
+    margin-inline: 5px;
 }
 
 #task-form > input[type='submit'],
@@ -267,7 +270,7 @@ body {
     padding: 10px 20px;
     border-radius: 15px;
     text-align: center;
-    height: clamp(400px, 60vh, 550px);
+    height: clamp(400px, 65vh, 660px);
     box-shadow: 0px 0px 17px rgba(85, 85, 85, 0.352);
 }
 
@@ -352,7 +355,7 @@ body {
 /* ⚡⚡⚡ Signup form ⚡⚡⚡  */
 .signup-form {
     width: clamp(310px, 65vw, 1440px);
-    height: clamp(450px, 65vh, 600px);
+    min-height: 600px;
 }
 
 .signup-form > header > h2 {

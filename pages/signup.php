@@ -81,7 +81,7 @@
         <a href="./login.php" id="to-login">Log-in</a>
     </section>
 
-
+    <section style="margin-top: 100px"></section>
     <script> 
         const userNameInput = document.querySelector("#username");
         const usernames = JSON.parse('<?php echo json_encode($usernames)?>');
