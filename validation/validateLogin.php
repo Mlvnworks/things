@@ -4,7 +4,9 @@
         $password = $_POST["password"];
        
         try{
-            $connection = new mysqli("containers-us-west-78.railway.app","root", "Y3pN4KApZJiYJpRQ0S23", "railway",5930);            $getUserFromDb = "SELECT * FROM users WHERE username = '".$username."' AND password = '".$password."'";
+            //$connection = new mysqli("containers-us-west-78.railway.app","root", "Y3pN4KApZJiYJpRQ0S23", "railway",5930);            
+            $getUserFromDb = "SELECT * FROM users WHERE username = '".$username."' AND password = '".$password."'";
+            include "../conn/connection.php";
             $isExist = $connection->query($getUserFromDb);
 
             if($isExist->num_rows === 1){

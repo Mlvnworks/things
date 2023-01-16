@@ -8,7 +8,8 @@
     $tasks = [];
 
     function connectToDatabase($query){
-            $connection = new mysqli("containers-us-west-78.railway.app","root", "Y3pN4KApZJiYJpRQ0S23", "railway",5930);
+            // $connection = new mysqli("containers-us-west-78.railway.app","root", "Y3pN4KApZJiYJpRQ0S23", "railway",5930);
+            include "./conn/connection.php";
             return $connection -> query($query);
     }
 
@@ -103,7 +104,7 @@
                     echo "<p>".$userData["username"]."</p>";
                 }else{
                     echo '<a href="./pages/login.php" id="log-in">Log-in</a>
-                    <a href="#" id="sign-up">Sign-up</a>';
+                    <a href="./pages/signup.php" id="sign-up">Sign-up</a>';
                 }
             ?>
             <div class="account-icon">

@@ -10,7 +10,9 @@
         $_SESSION["signup"] = "";
 
         try{
-            $connection = new mysqli("containers-us-west-78.railway.app","root", "Y3pN4KApZJiYJpRQ0S23", "railway",5930);            $addUserQuery = 'INSERT INTO users(id, name, email , username, password, is_login)
+            //$connection = new mysqli("containers-us-west-78.railway.app","root", "Y3pN4KApZJiYJpRQ0S23", "railway",5930);            
+            include "../conn/connection.php";
+            $addUserQuery = 'INSERT INTO users(id, name, email , username, password, is_login)
                             VALUES('.$randomId.', "'. $name .'", "'. $email .'", "'.$username.'", "'.$password.'", 1)';
             $connection->query($addUserQuery);
             $connection->close();

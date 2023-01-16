@@ -2,7 +2,9 @@
     $usernames = [];
     $errorMessage = null;
     try{
-        $connection = new mysqli("containers-us-west-78.railway.app","root", "Y3pN4KApZJiYJpRQ0S23", "railway",5930);        $getUsernames = "SELECT username FROM users ORDER BY username";
+        //$connection = new mysqli("containers-us-west-78.railway.app","root", "Y3pN4KApZJiYJpRQ0S23", "railway",5930);        
+        $getUsernames = "SELECT username FROM users ORDER BY username";
+        include "../conn/connection.php";
         $result = $connection->query($getUsernames);
         
         while($row = $result->fetch_assoc()){

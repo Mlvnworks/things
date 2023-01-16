@@ -4,7 +4,8 @@
         $taskId = $_GET["task_id"] * 1;
         
         try{
-            $connection = new mysqli("containers-us-west-78.railway.app","root", "Y3pN4KApZJiYJpRQ0S23", "railway",5930);            
+            //$connection = new mysqli("containers-us-west-78.railway.app","root", "Y3pN4KApZJiYJpRQ0S23", "railway",5930);            
+            include "../conn/connection.php";
             $query = "";
             
             

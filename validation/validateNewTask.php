@@ -5,7 +5,9 @@
         $taskId = rand(1000, 9999);
         
         try{
-            $connection = new mysqli("containers-us-west-78.railway.app","root", "Y3pN4KApZJiYJpRQ0S23", "railway",5930);            $query = "INSERT INTO todos(id, task_name, is_done)
+            //$connection = new mysqli("containers-us-west-78.railway.app","root", "Y3pN4KApZJiYJpRQ0S23", "railway",5930);            
+            include "../conn/connection.php";
+            $query = "INSERT INTO todos(id, task_name, is_done)
                     VALUES(
                         $taskId,
                         '".$taskName."',
